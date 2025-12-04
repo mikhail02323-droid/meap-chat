@@ -12,7 +12,7 @@ const DATABASE = {
   async getAllUsers() {
     try {
       // Replace with your MongoDB API endpoint
-      const response = await fetch(API_URL + "/api/users", {
+      const response = await fetch(API_URL + "/users", {
         method: "GET",
         headers: { "Content-Type": "application/json" }
       });
@@ -30,7 +30,7 @@ const DATABASE = {
 
   async saveUser(user) {
     try {
-      const response = await fetch(API_URL + "/api/users", {
+      const response = await fetch(API_URL + "/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user)
