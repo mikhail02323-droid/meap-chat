@@ -128,7 +128,6 @@ function setupEventListeners() {
 
   // Search users input listener
   const searchUsersInput = document.getElementById("searchUsersInput");
-  if (searchUsersInput) {
     searchUsersInput.addEventListener("input", (e) => {
       const searchTerm = e.target.value.toLowerCase();
       const searchResults = document.getElementById("searchResults");
@@ -150,7 +149,6 @@ function setupEventListeners() {
             addFriendToList(user.id, user.name)
           );
         });
-      }
     });
   }
 }
