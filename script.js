@@ -85,20 +85,20 @@ function init() {
 
 // Event listeners
 function setupEventListeners() {
-  loginBtn?.addEventListener("click", handleLogin);
-  registerBtn?.addEventListener("click", handleRegister);
-  switchToRegister?.addEventListener("click", () => switchAuthForm("register"));
-  switchToLogin?.addEventListener("click", () => switchAuthForm("login"));
-  logoutBtn?.addEventListener("click", handleLogout);
-  sendBtn?.addEventListener("click", sendMessage);
-  newChatBtn?.addEventListener("click", startNewChat);
-  messageInput?.addEventListener("keypress", (e) => {
+  loginBtn.addEventListener("click", handleLogin);
+  registerBtn.addEventListener("click", handleRegister);
+  switchToRegister.addEventListener("click", () => switchAuthForm("register"));
+  switchToLogin.addEventListener("click", () => switchAuthForm("login"));
+  logoutBtn.addEventListener("click", handleLogout);
+  sendBtn.addEventListener("click", sendMessage);
+  newChatBtn.addEventListener("click", startNewChat);
+  messageInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       sendMessage();
     }
   });
-  friendsList?.addEventListener("click", (e) => {
+  friendsList.addEventListener("click", (e) => {
     const friendItem = e.target.closest(".friend-item");
     if (friendItem) {
       const friendName = friendItem.textContent;
@@ -149,8 +149,8 @@ function setupEventListeners() {
             addFriendToList(user.id, user.name)
           );
         });
-    });
-  }
+    }
+});
 }
 
 // Auth functions
